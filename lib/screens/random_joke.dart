@@ -7,7 +7,7 @@ class RandomJokeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Random Joke')),
+      appBar: AppBar(title: Text('random joke')),
       body: FutureBuilder<Map<String, dynamic>>(
         future: apiService.fetchRandomJoke(),
         builder: (context, snapshot) {

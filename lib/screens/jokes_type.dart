@@ -10,7 +10,7 @@ class JokesByTypeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('$type Jokes')),
+      appBar: AppBar(title: Text('$type jokes')),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: apiService.fetchJokesByType(type),
         builder: (context, snapshot) {
