@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../services/api_services.dart';
 import 'jokes_type.dart';
+import 'favorites.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -36,7 +37,24 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Joke Types'),
+        // actions: [
+        //   IconButton(
+        //     icon: Lottie.asset('assets/laughing_emoji.json'),
+        //     onPressed: () {
+        //       Navigator.pushNamed(context, '/random_joke');
+        //     },
+        //   ),
+        // ],
         actions: [
+          IconButton(
+            icon: Icon(Icons.favorite),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FavoritesScreen()),
+              );
+            },
+          ),
           IconButton(
             icon: Lottie.asset('assets/laughing_emoji.json'),
             onPressed: () {
@@ -110,3 +128,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
