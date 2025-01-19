@@ -37,14 +37,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Joke Types'),
-        // actions: [
-        //   IconButton(
-        //     icon: Lottie.asset('assets/laughing_emoji.json'),
-        //     onPressed: () {
-        //       Navigator.pushNamed(context, '/random_joke');
-        //     },
-        //   ),
-        // ],
         actions: [
           IconButton(
             icon: Icon(Icons.favorite),
